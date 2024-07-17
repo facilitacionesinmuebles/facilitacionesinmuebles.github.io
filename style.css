@@ -481,6 +481,7 @@ video {
     height: auto;
     max-height: 300px; /* Ajusta la altura máxima de las imágenes y videos según tu diseño */
     object-fit: cover; /* Ajusta cómo se ajustan las imágenes y videos dentro de los slides */
+    
 }
 
 #slide1:checked ~ .carousel-slides {
@@ -532,11 +533,12 @@ video {
     position: absolute;
     bottom: 10px;
     width: 100%;
+    padding: 1px;
 }
 
 .carousel-control {
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 30px;
     background: rgba(0, 0, 0, 0.5);
     margin: 0 5px;
     border-radius: 50%;
