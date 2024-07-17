@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilitaciones Inmuebles</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Box icons link-->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tektur&family=Work+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,200;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <a href="/index.html" class="Logo">
+            <img src="/img/logo-v2.png">
+        </a>
+    
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <i class='bx bx-menu'></i>
+        </label>
+    
+        <ul class="navbar">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/#about-section">Sobre Nosotros</a></li>
+            <li><a href="/properties.html">Propiedades</a></li>
+            <li><a href="/garage.html">Cocheras</a></li>
+            <li><a href="/contact.html">Contactenos</a></li>
+        </ul>
+    </header>
+    
+    <form action="https://formsubmit.co/facilitacionesinmuebles@gmail.com" method="POST" class="form-contact"
+        autocomplete="off" data-aos="zoom-in-up">
+        <h2>Contacto</h2>
+
+
+
+        <div class="input-group" data-aos="zoom-in-up">
+
+            <input type="text" name="name" placeholder="Nombre y Apellido">
+
+            <input type="tel" name="phone" placeholder="Teléfono">
+
+            <input type="email" name="email" placeholder="Correo electrónico">
+
+            <input type="text" name="Propiedad" placeholder="Propiedad interesada">
+
+            <textarea name="message" cols="30" rows="5" placeholder="Escriba su mensaje aquí"></textarea>
+
+            <input class="btn" type="submit" value="Enviar">
+
+        </div>
+        <script>
+             const form = document.querySelector('.form-contact');
+    form.addEventListener('submit', (e) => {
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const phone = form.querySelector('input[name="phone"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const property = form.querySelector('input[name="Propiedad"]').value.trim();
+        const message = form.querySelector('textarea[name="message"]').value.trim();
+
+        if (!name || !phone || !email || !property || !message) {
+            e.preventDefault(); // Prevent form submission
+            alert("Por favor, complete todos los campos antes de enviar el formulario.");
+        }
+    });
+        </script>
+
+    </form>
+
+
+
+
+
+    <!--Contact-->
+    <section class="contact" data-aos="zoom-in-up">
+        <div class="contact-content">
+            <strong><p>Seguinos en nuestras redes sociales para no perderte de nuestras últimas ofertas y novedades!</strong></p>
+            <div class="icons">
+                <a href="https://www.facebook.com/groups/1122901311881022"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/facilitaciones_de_inmuebles/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/facilinmueble"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.youtube.com/channel/UCxUfkBhnDYmLsDqbHY0Kmqw"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+            offset: 50,
+            duration: 1200
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
