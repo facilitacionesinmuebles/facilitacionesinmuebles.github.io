@@ -457,7 +457,7 @@ max-width: 20px;
 }
 
 #mensaje-bienvenida {
-    text-align: center;
+    text-align: justify;
     /* Otros estilos que desees aplicar */
 }
 
