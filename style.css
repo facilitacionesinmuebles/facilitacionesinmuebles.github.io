@@ -343,7 +343,7 @@ section {
 }
 
 /* Media query para ajustes en versiones responsive */
-@media (max-width: 768px) {
+@media (max-width: 1170px) {
     .Subscribe {
         padding: 4rem 1rem; /* Ajusta el espaciado en dispositivos móviles */
     }
