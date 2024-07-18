@@ -41,6 +41,12 @@ header {
 .navbar {
     display: flex;
     background-color: var(--bg-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 10px 0;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -58,7 +64,7 @@ header {
 }
 
 section {
-    padding: 300px 15% 0px;
+    padding: 100px 15% 0px;
 }
 
 #section-departamentos{
@@ -66,27 +72,32 @@ section {
     padding: 10px 0;
 }
 
-
 .home {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 4.5rem;
+    position: relative; /* Para poder posicionar elementos hijos relativamente */
+    display: flex; /* Flexbox para alinear verticalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alineación del texto */
+    height: 100vh; /* Altura de la sección, ajustable según necesites */
+    background-image: url('/img/BsAs-edificios.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interior */
 }
 
-.home-text h1 {
-    font-size: var(--h1-font);
-    line-height: 1.2;
-    margin-bottom: 20px;
+.home-text {
+    max-width: 100%;
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interior */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
 }
 
+.home-text h1,
 .home-text p {
-    font-size: var(--p-font);
-    color: var(--other-color);
-    line-height: 30px;
-    margin-bottom: 2.5rem;
+    margin: 10px 0; /* Espaciado entre los elementos */
 }
+
 
 .property-content {
     display: grid;
@@ -234,6 +245,16 @@ section {
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px; /* Ajusta el espaciado de los enlaces en dispositivos móviles */
+    }
+
+    .home {
+        padding-top: 80px; /* Ajusta el espacio superior para dejar espacio para la navbar */
+        margin-top: 80px; /* Ajusta según el tamaño de la navbar */
+    }
+}
 
   .contact{
     display: grid;
@@ -278,12 +299,10 @@ section {
     transform: translateY(-3px);
     color: var(--text-color);
 }
-
-  .Subscribe-content{
+.Subscribe {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
     background: url(../img/ss.jpg);
     background-size: cover;
@@ -291,16 +310,45 @@ section {
     border-radius: 20px;
     padding: 6rem 2rem;
 }
-.Subscribe-content h2{
+
+.Subscribe-content {
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad del texto */
+    color: white; /* Color del texto */
+}
+
+.Subscribe-content h2 {
     font-size: var(--h2-font);
     margin-bottom: 12px;
 }
-.Subscribe-content p{
+
+.Subscribe-content p {
     font-size: var(--p-font);
     line-height: 30px;
     margin-bottom: 27px;
-
 }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Color de fondo del botón */
+    color: #333; /* Color del texto del botón */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
+}
+
+/* Media query para ajustes en versiones responsive */
+@media (max-width: 768px) {
+    .Subscribe {
+        padding: 4rem 1rem; /* Ajusta el espaciado en dispositivos móviles */
+    }
+}
+
 
 
 
