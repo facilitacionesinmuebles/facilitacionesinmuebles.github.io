@@ -449,8 +449,20 @@ h6{
     text-align: center;
 
 }
+h2{
+    text-align: center;
+}
 #mi-imagen{
 max-width: 20px;
+}
+
+#mensaje-bienvenida {
+    text-align: center;
+    /* Otros estilos que desees aplicar */
+}
+
+#h2{
+    text-align: left;
 }
 #features .p{
     font-size:20em; /* Tamaño de fuente */
