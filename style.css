@@ -622,3 +622,77 @@ video {
     border: 0;
 }
 /*alquiler 2 test*/
+
+.swiffy-slider {
+    max-width: 50%; /* Ajusta el ancho máximo del slider según necesites */
+    margin: 0 auto; /* Centra el slider horizontalmente */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del slider */
+    position: relative; /* Asegura que los elementos posicionados se comporten correctamente */
+}
+.slider-container {
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    list-style: none; /* Quita los estilos de lista */
+    padding: 0; /* Elimina el padding predeterminado de la lista */
+    margin: 0; /* Elimina el margen predeterminado de la lista */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 100%; /* Ajusta la altura del contenedor para centrar verticalmente */
+}
+
+.slider-container li {
+    flex: 0 0 100%; /* Establece cada slide como un elemento flexible del 100% de ancho */
+}
+
+.slider-container img {
+    display: block;
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin: 0 auto;
+}
+
+
+.slider-nav {
+    position: absolute; /* Posiciona los controles de navegación */
+    top: 50%; /* Alinea los controles de navegación al centro vertical */
+    transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo para los botones */
+    border: none; /* Quita el borde de los botones */
+    color: white; /* Color del texto de los botones */
+    cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre los botones */
+}
+
+.slider-nav-next {
+    right: 0; /* Posiciona el botón de siguiente a la derecha */
+}
+
+.slider-indicators {
+    text-align: center; /* Centra los indicadores de slides */
+    margin-top: 10px; /* Espacio superior entre el contenido y los indicadores */
+}
+
+.slider-indicators button {
+    display: inline-block; /* Asegura que los indicadores sean elementos en línea */
+    width: 10px; /* Ancho de los indicadores */
+    height: 10px; /* Altura de los indicadores */
+    border-radius: 50%; /* Forma redondeada de los indicadores */
+    border: none; /* Quita el borde de los indicadores */
+    background-color: #ccc; /* Color de fondo de los indicadores inactivos */
+    margin: 0 5px; /* Espacio horizontal entre los indicadores */
+    cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre los indicadores */
+}
+
+.slider-indicators button.active {
+    background-color: #333; /* Color de fondo del indicador activo */
+}
+
+@media (max-width: 768px) {
+    .swiffy-slider {
+        max-width: 90%; /* Reducir el ancho máximo del slider en pantallas más pequeñas */
+    }
+
+    .slider-container img {
+        max-width: 100%; /* Ajustar las imágenes para que no excedan el ancho máximo del contenedor */
+        height: auto; /* Mantiene la proporción de aspecto original de las imágenes */
+       
+    }
+}
