@@ -625,12 +625,7 @@ video {
     position: relative; /* Asegura que los elementos posicionados se comporten correctamente */
 }
 .slider-container {
-    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
-    list-style: none; /* Quita los estilos de lista */
-    padding: 0; /* Elimina el padding predeterminado de la lista */
-    margin: 0; /* Elimina el margen predeterminado de la lista */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */*/
     height: 100%; /* Ajusta la altura del contenedor para centrar verticalmente */
 }
 
