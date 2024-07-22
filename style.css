@@ -468,137 +468,9 @@ max-width: 20px;
 }
 
 
-/*VIDEO */
-.video-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-video {
-    width: 100%;
-    max-width: 600px; /* Ajusta el ancho máximo del video según tu diseño */
-    height: auto;
-}
-
-.video-controls {
-    margin-top: 10px;
-}
-
-.video-controls button {
-    margin: 0 5px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.video-controls button:hover {
-    background-color: #0056b3;
-}
-
-/*CSS CARROUSEL*/
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
-    margin: 0 auto; /* Centra el carrusel horizontalmente */
-}
 
 
-.carousel input[type="radio"] {
-    display: none;
-    
-}
 
-.carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 400%; /* Ajusta el ancho total del carrusel según el número de slides */
-}
-
-.carousel-slide {
-    flex: 0 0 25%; /* Cada slide ocupa el 25% del contenedor */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-.carousel-slide img, .carousel-slide video {
-    width: auto;
-    height: auto;
-    max-height: 300px; /* Ajusta la altura máxima de las imágenes y videos según tu diseño */
-    object-fit: cover; /* Ajusta cómo se ajustan las imágenes y videos dentro de los slides */
-    
-}
-
-#slide1:checked ~ .carousel-slides {
-    transform: translateX(0%);
-}
-
-#slide2:checked ~ .carousel-slides {
-    transform: translateX(-25%);
-}
-
-#slide3:checked ~ .carousel-slides {
-    transform: translateX(-50%);
-}
-
-#slide4:checked ~ .carousel-slides {
-    transform: translateX(-75%);
-}
-#slide5:checked ~ .carousel-slides {
-    transform: translateX(-100%);
-}
-
-#slide6:checked ~ .carousel-slides {
-    transform: translateX(-125%);
-}
-
-#slide7:checked ~ .carousel-slides {
-    transform: translateX(-150%);
-}
-
-#slide8:checked ~ .carousel-slides {
-    transform: translateX(-175%);
-}
-#slide9:checked ~ .carousel-slides {
-    transform: translateX(-200%);
-}
-#slide10:checked ~ .carousel-slides {
-    transform: translateX(-225%);
-}
-#slide11:checked ~ .carousel-slides {
-    transform: translateX(-250%);
-}
-#slide12:checked ~ .carousel-slides {
-    transform: translateX(-275%);
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    padding: 1px;
-}
-
-.carousel-control {
-    width: 40px;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
-}
 /*MAPA RESPONSIVO*/
 .map-container {
     position: relative;
@@ -625,7 +497,7 @@ video {
     position: relative; /* Asegura que los elementos posicionados se comporten correctamente */
 }
 .slider-container {
-    display: flex; /* Utiliza flexbox para alinear los elementos en línea */*/
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
     height: 100%; /* Ajusta la altura del contenedor para centrar verticalmente */
 }
 
@@ -633,9 +505,15 @@ video {
     flex: 0 0 100%; /* Establece cada slide como un elemento flexible del 100% de ancho */
 }
 
-.slider-container img {
+.slider-container img{
     display: block;
     width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin: 0 auto;
+}
+.slider-container video{
+    display: block;
+    width: 48%;
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
     margin: 0 auto;
 }
