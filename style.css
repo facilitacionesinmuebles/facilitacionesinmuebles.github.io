@@ -40,9 +40,8 @@ header {
 
 .navbar {
     display: flex;
+    justify-content: end;
     background-color: var(--bg-color);
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--bg-color);
     padding: 10px 0;
@@ -200,10 +199,6 @@ section {
 
     .navbar {
         position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 270px;
-        height: 100vh;
         flex-direction: column;
         background: #101821;
         padding: 20px 15px;
