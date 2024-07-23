@@ -367,6 +367,7 @@ section {
     flex: 1; 
     padding: 10px;
     margin-bottom: 10px;
+    
   }
   
   @media (max-width: 768px) {
@@ -564,3 +565,41 @@ max-width: 20px;
        
     }
 }
+
+/*boton de Whatsapp*/
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+  }
+  
+  .float:hover {
+    text-decoration: none;
+    color: #25d366;
+    background-color: #fff;
+  }
+  
+  .my-float {
+    margin-top: 16px;
+  }
+  
+  /* Añadir media query para ajustar en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .float {
+      width: 50px; /* Reducir el tamaño */
+      height: 50px;
+      bottom: 30px; /* Ajustar la posición */
+      right: 30px;
+      font-size: 24px; /* Reducir el tamaño de la fuente */
+    }
+  }
+  
